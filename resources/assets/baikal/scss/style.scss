@@ -1,0 +1,179 @@
+@import "config";
+@import "core";
+
+html{
+	font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 800;
+}
+.btn{
+	font-weight: 800;
+}
+.btn-social{
+	height:36px; 
+	width:36px; 
+	line-height:36px; 
+	text-align: center;
+	padding:0
+}
+u{
+	text-underline-position: under;
+}
+
+.flex-direction-nav a{
+	font-size: 0;
+	height: 100%;
+	width: 15%;
+	top: 0;
+	&:before{
+		width: 100%;
+		height: 100%;
+		top: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		color: white;
+		text-shadow: none;
+		transform: translateY(-50%);
+	}
+	&.flex-next{
+		cursor: e-resize;
+		&:before{
+			text-align: right;
+		}
+	}
+	&.flex-prev{
+		cursor: w-resize;
+		&:before{
+			text-align: left;
+		}
+	}
+}
+.o-0{
+	opacity: 0;
+}
+.text-underline{
+	text-decoration: underline;
+}
+// Arrow Down animation
+.header{
+	position: relative;
+	.down-arrow{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		color: white;
+		padding: map-get($spacers, 6) map-get($spacers, 5);
+
+		span{
+			display: block;
+			opacity: 0;
+			line-height: 0;
+			height: 10px;
+		    width: 10px;
+		    border-right: 2px solid white;
+		    border-bottom: 2px solid white;
+
+		    transform: rotate(45deg);
+		}
+	}
+}
+
+// GSAP Animation
+.gsap{
+	> * { opacity: 0; }
+}
+.gsap-fade-in{
+	opacity: 0;
+	filter: blur(5px);
+}
+
+
+// Navigation Fix
+ul.navbar-nav{
+	@include mq($until: desktop) {
+		background-color: map-get($colors, 1);
+		> li{
+			text-align: left;
+			margin-left: map-get($spacers, 4) !important;
+			margin-right: map-get($spacers, 4) !important;
+		}
+	}
+	.has-dropdown{
+		@include mq($from: desktop) {
+			margin-right: map-get($spacers, 3);
+		}
+	}
+}
+.znav-container .navbar button.navbar-toggler{
+	transform: none;
+}
+
+
+.flexslider .slides > li:first-child{
+	display: block;
+}
+
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: map-get($colors, 1);
+  z-index: 9999;
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(../images/preloader.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+}
+
+
+
+
+
+//////// And We hate IE too //////////
+.sticky-top{
+    z-index: 1029;
+    position: relative;
+    position: sticky;
+}
+
+.ie{
+    @include mq($from: wide) {
+        .h-full{
+            height: 100vh;
+        }
+        .h-half{
+            height: 50vh;
+        }
+    }
+    .background-holder{
+        video{
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+}
+.edge{
+    .background-holder{
+        video{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+// baikal core files
+@import "../baikal/lib/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Muli:400,600,700,800,900");
+@import "../baikal/lib/font-awesome/css/font-awesome.min.css";
+@import "../baikal/lib/css-hamburgers/dist/hamburgers.css";
+@import "../baikal/css/style.css";
+@import "../baikal/css/custom.css";
+
+// 3rd party libraries
+@import "../../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css";
+@import "../../../node_modules/fullcalendar/dist/fullcalendar.css";
+
+// custom css
+@import "custom";

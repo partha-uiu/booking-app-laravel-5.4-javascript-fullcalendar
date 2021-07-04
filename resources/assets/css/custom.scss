@@ -1,0 +1,266 @@
+$our-blue: #53a7eb;
+$our-blue-darken: darken(#53a7eb, 15%);
+$success: #8BC34A;
+$danger: #F44336;
+$info: #e5f2fd;
+
+html {
+  font-size: 17px;
+}
+
+.navbar-brand {
+  text-transform: none !important;
+}
+
+.fc .fc-toolbar h2 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.fc-today {
+  background-color: #eeeeee !important;
+}
+
+.fc-selected {
+  background-color: $our-blue !important;
+}
+
+.day-cell, .night-cell, .fullday-cell {
+  text-align: center;
+  border: none;
+}
+
+.day-cell {
+  background-color: #f1c40f;
+  color: #ffffff !important;
+}
+
+.night-cell {
+  background-color: #34495e;
+  color: #ffffff !important;
+}
+
+.fullday-cell {
+  background-color: #e74c3c;
+  color: #ffffff !important;
+}
+
+.day-cell:before, .night-cell:before, .fullday-cell:before {
+  font-family: "FontAwesome", serif;
+  position: absolute;
+  left: 5px;
+}
+
+.day-cell:before {
+  content: '\f185';
+  color: #ffffff;
+}
+
+.night-cell:before {
+  content: '\f186';
+  color: #ffffff;
+}
+
+.fullday-cell:before {
+  content: '\f111';
+  color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .fc-title {
+    visibility: hidden;
+  }
+  .day-cell:before, .night-cell:before, .fullday-cell:before {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.inner-page {
+  min-height: calc(100vh - 184px);
+}
+
+.center-page {
+  min-height: calc(100vh - 136px);
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.7rem + 2px);
+}
+
+div#znav-container {
+  padding: 10px;
+  background-color: #F3F9FE !important;
+}
+
+a {
+  color: $our-blue;
+}
+
+a:hover, a:focus {
+  color: $our-blue-darken;
+}
+
+.btn:focus, .btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $our-blue;
+  border-color: $our-blue;
+}
+
+.background-primary {
+  background-color: $our-blue !important;
+}
+
+.btn-outline-primary {
+  color: $our-blue-darken;
+  border-color: $our-blue;
+  background-image: none;
+  background-color: transparent;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary:hover, .btn-outline-primary.focus {
+  background-color: $our-blue-darken;
+  border-color: $our-blue-darken;
+}
+
+.btn-primary.active, .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
+  background-color: $our-blue-darken;
+  border-color: $our-blue-darken;
+}
+
+.form-control:focus {
+  border-color: $our-blue;
+}
+
+.znav-container a:not(.btn) {
+  color: $our-blue;
+}
+
+.znav-container a:not(.btn):active, .znav-container a:not(.btn):hover, .znav-container a:not(.btn):focus, .znav-container a:not(.btn):active:focus {
+  color: $our-blue-darken;
+}
+
+.znav-container .megamenu, .znav-container .dropdown {
+  color: white;
+  background-color: #fff;
+}
+
+.card {
+  border-color: #f2f2f2;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.card-header a {
+  color: #ffffff;
+}
+
+a.navbar-brand {
+  color: $our-blue;
+}
+
+.border-color-primary {
+  border-color: $our-blue !important;
+}
+
+.card-header, .card-footer {
+  background-color: $our-blue;
+}
+
+.card h4 {
+  color: $our-blue;
+}
+
+.badge-primary {
+  background-color: $our-blue;
+}
+
+.alert-success {
+  color: #ffffff;
+  background-color: $success;
+  border-color: darken($success, 10%);
+}
+
+.alert-danger {
+  color: #ffffff;
+  background-color: $danger;
+  border-color: darken($danger, 10%);
+}
+
+.alert-info {
+  color: #080808;
+  background-color: $info;
+  border-color: darken($info, 10%);
+}
+
+.close {
+  color: #fff;
+  text-shadow: none;
+  opacity: 0.8;
+}
+
+.close:focus, .close:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: $our-blue;
+  border-color: transparent;
+  color: white;
+}
+
+.pagination .page-item .page-link {
+  color: $our-blue;
+}
+
+.znav-container .has-dropdown .dropdown {
+  z-index: 1;
+}
+
+.znav-container button {
+  color: $our-blue;
+}
+
+@media (max-width: 61.99em) {
+  ul.navbar-nav {
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: 450px) {
+  .fc-toolbar > * > *, .fc-toolbar .fc-left, .fc-toolbar .fc-right {
+    float: none;
+  }
+  .fc .fc-toolbar > * > * {
+    float: none;
+    text-align: center;
+  }
+  .fc-right {
+    display: inline-flex;
+    margin: 20px auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
